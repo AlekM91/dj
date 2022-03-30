@@ -1,0 +1,40 @@
+.hamburger {
+    width: 30px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    div {
+        background: $white;
+        height: 2px;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    div:not(.hamburger-active) {
+        transition: margin .2s linear, transform .2s .2s linear;
+    }
+
+    @include media-up(s) {
+        display: none;
+    }
+
+    &-active {
+
+        div {
+
+            &:first-child {
+                transform: rotate(45deg);
+                margin-top: 9px;
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
+

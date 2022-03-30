@@ -1,0 +1,67 @@
+// Colors
+$primary: #04001A !default;
+$secondary: #FF002E !default;
+
+$white: #fff;
+$black: #000;
+
+// color palette - map
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "blue": #1919e6,
+    "red": #e61919,
+    "yellow": #e6e619,
+    "green": #19e635,
+    "orange": #ffa600,
+    "purple": #9900ff,
+    "gray": #808080,
+    "white": $white,
+    "black": $black,
+);
+// @debug map-get($colors, "blue") ;
+
+// Grid
+$grid-breakpoints: (
+    "_z": 0,
+    "xs": 480px,
+    "s": 576px,
+    "m": 768px,
+    "l": 992px,
+    "xl": 1280px,
+);
+
+$wrapper-max-widths: (
+    "s": 540px,
+    "m": 720px,
+    "l": 960px,
+    "xl": 1140px,
+) !default;
+
+
+$mobile-landscape-width: 560px;
+$mobile-landscape-height: 480px;
+
+$narrow-laptop-width: 992px;
+$narrow-laptop-height: 650px;
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+
+// Fonts
+$default-font: 'Poppins', sans-serif;
+
+// font sizes
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;

@@ -1,0 +1,17 @@
+.text-center{
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.clearfix :after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.autoprefixer-test {
+    user-select: none;
+}

@@ -1,0 +1,67 @@
+.main-heading {
+    font-weight: 700;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @include media-up(s) {
+        font-size: 65px;
+    }
+
+    @include media-up(m) {
+        font-size: 76px;
+    }
+
+    @include media-up(l) {
+        font-size: 96px;
+    }
+}
+
+.headings {
+    position: relative;
+    margin-bottom: 30px;
+
+    .heading-background {
+        color: rgba(249, 1, 46, .09);       
+        // color: rgba(249, 1, 46, .5);
+        font-weight: 700;
+        font-size: 100px;
+        position: relative;
+        text-align: right;
+
+        @include media-up(l) {
+            font-size: 200px;
+            text-align: right;
+        }
+
+         @include media-up(xl) {
+            font-size: 240px;
+        }
+    }
+
+    .heading {
+        font-weight: 700;
+        font-size:  24px;
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+
+        @include media-up(l) {
+            font-size: 46px;
+            left: 50%;
+            bottom: 45px;
+        }
+    }
+}
+
+.headings-left {
+    
+    .heading-background {
+        text-align: left;
+    }
+
+    .heading {
+        right: auto;
+        left: 15px;
+    }
+}

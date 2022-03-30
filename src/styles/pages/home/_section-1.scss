@@ -1,0 +1,30 @@
+.section-1 {
+    background: url('/src/assets/images/background.jpg');
+    background-position: 40% 50%;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    height: 100vh;
+    position: relative;
+
+    @include media-up(m) {
+        height: 110vh;
+    }
+
+    .section-content {
+        height: 100%;
+
+        .cta {
+           position: absolute;
+           top: 50%;
+           right: 15px;
+
+           @include media-up(s) {
+               right: 10%;
+            }
+
+           @include media-up(l) {
+               right: 15%;
+            }
+        }
+    }
+}

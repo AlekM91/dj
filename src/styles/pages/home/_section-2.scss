@@ -1,0 +1,32 @@
+.section-2 {
+    
+    .section-content {
+
+        .text-content {
+            text-align: right;
+            margin-bottom: 40px;
+        }
+        
+        @include media-up(l) {
+            display: flex;
+
+            .text, 
+            .gallery {
+                flex-basis: 100%;
+            }
+
+            .text {
+                order: 2;
+
+                .text-content {
+                    padding-left: 100px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @include media-up(m) {
+        margin-bottom: 200px;
+    }
+}

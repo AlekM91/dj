@@ -1,0 +1,55 @@
+// Footer
+.site-footer {
+    padding: 100px 0;
+    .footer-content {
+        display: flex;
+
+        .footer-copyright,
+        .footer-nav {
+            flex-basis: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-copyright {
+            text-align: center;
+
+            .logo {
+
+                img {
+                    height: 85px;
+                }
+
+                @include media-up(m) {
+                    
+                    img {
+                        height: 155px;
+                    }
+                }
+            }
+        }
+
+        .footer-nav {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            
+
+            li {
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+
+                @include media-up(m) {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            
+        }
+    }
+}

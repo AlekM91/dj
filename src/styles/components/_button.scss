@@ -1,0 +1,111 @@
+// This is the style for the main button - in case we need to use it again
+.button-main {
+    display: inline-block;   
+
+    a {
+        color: $secondary;
+        text-decoration: none;
+        padding: 10px 24px;
+        font-size: 13px;
+        font-weight: bold;
+        transition: .5s;
+        cursor: pointer;   
+        position: relative;
+        display: inline-block;
+
+        span {
+            display: block;
+            position: absolute;
+            background: $secondary;
+            transition: .5s;
+
+            &:nth-child(1) {
+                left: 0;
+                top: 0;
+                width: 2px;
+                height: 100%;
+
+                transform-origin: top;
+                transition: transform .5s;
+            }
+
+            &:nth-child(2) {
+                left: 100%;
+                top: 0;
+                width: 2px;
+                height: 104%;
+                transform-origin: bottom;
+                transition: transform .5s;
+            }
+
+            &:nth-child(3) {
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 2px;
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: transform .5s;
+            }
+
+            &:nth-child(4) {
+                left: 0;
+                top: 100%;
+                width: 100%;
+                height: 2px;
+                transform: scaleX(1);
+                transform-origin: right;
+                transition: transform .5s;
+            }
+
+        }
+
+        &:hover {
+
+            background: $secondary;
+            color: $white;
+            box-shadow: 0 0 50px $secondary;
+            border-radius: 2px;
+            transition-delay: .5s;
+
+            span {
+
+                &:nth-child(1) {
+                    transform: scaleY(0);
+                    transform-origin: bottom;
+                    transition: transform .5s;
+                }
+
+                &:nth-child(2) {
+                    transform: scaleY(0);
+                    transform-origin: top;
+                    transition: transform .5s;
+                }
+
+                &:nth-child(3) {
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform .5s;
+                }
+
+                &:nth-child(4) {
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    transition: transform .5s;
+                }
+            }
+        }
+
+
+        @include media-up(s) {
+            padding: 12px 30px;
+            font-size: 18px;
+        }
+
+        @include media-up(m) {
+            padding: 15px 40px;
+            
+        }
+    }
+}
+
