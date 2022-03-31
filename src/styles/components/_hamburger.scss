@@ -11,11 +11,9 @@
         height: 2px;
         width: 100%;
         border-radius: 20px;
+        transition: margin .2s .2s linear, transform .2s linear;
     }
 
-    div:not(.hamburger-active) {
-        transition: margin .2s linear, transform .2s .2s linear;
-    }
 
     @include media-up(s) {
         display: none;
@@ -24,17 +22,20 @@
     &-active {
 
         div {
-
+            transition: margin .2s linear, transform .2s .2s linear;
+    
             &:first-child {
                 transform: rotate(45deg);
                 margin-top: 9px;
             }
-
+    
             &:last-child {
                 transform: rotate(-45deg);
                 margin-bottom: 6px;
             }
         }
     }
+    
 }
+
 

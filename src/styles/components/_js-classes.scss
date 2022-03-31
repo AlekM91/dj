@@ -1,3 +1,23 @@
 .js-no-scroll {
     overflow: hidden;
 }
+
+.opacity-js {
+    opacity: 0;
+}
+
+
+.music-active-js {
+    opacity: 1;
+}
+
+.music-hidden-js {
+    visibility: hidden;
+    opacity: 0;
+}
+
+// Disable scroll while music app is open
+.music-scroll-js {
+    overflow: hidden;
+    height: 100%;
+}

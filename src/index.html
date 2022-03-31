@@ -34,7 +34,7 @@
             <div class="cta">
                 <h1 class="heading main-heading">Kortexx</h1>
                 <div class="button button-main listen-now music-button-js">
-                    <a href="musicapp.html">listen now!
+                    <a href="#">listen now!
                     <span></span>
                     <span></span>
                     <span></span>
@@ -99,6 +99,53 @@
         </div>
     </section>
 </main>
+
+<div class="music-player music-hidden-js ">
+    <!-- music-hidden-js -->
+    <div class="music-close-button">
+        <span></span>
+        <span></span>
+    </div>
+
+    <canvas class= "opacity-js"id="myCanvas" width ="800" height = "400"></canvas>
+    <audio id="myAudio" src="" ></audio>
+
+    <div class="music-player-element icon-circle-mid">
+        <img src="./assets/images/player/circle.png" alt="">
+
+        <div class="music-name">
+            <p></p>
+        </div>
+
+        <div class="next-prev-arrows">
+            <div class="music-prev">
+                <img src="./assets/images/player/music-prev.png" alt="">
+            </div>
+            <div class="music-stop">
+                <img src="./assets/images/player/music-stop.png" alt="">
+            </div>
+            <div class="music-next">
+                <img src="./assets/images/player/music-next.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="music-player-element icon-play-pause">
+        <img src="./assets/images/player/play.png" alt="">
+    </div>
+
+    
+    <div class="music-arrow-left">
+        <img src="./assets/images/player/line-left.png" alt="">
+    </div>
+    <div class="music-arrow-right">
+        <img src="./assets/images/player/line-right.png" alt="">
+    </div>
+</div>
+<!-- song selection -->
+<div class="song-selection">
+    <p class="song-select" data-author="Author Name" data-name="Song Name" data-path="path"></p>
+</div>
 
 <footer class="site-footer">
     <div class="footer-content wrapper">

@@ -1,6 +1,7 @@
 // This is the style for the main button - in case we need to use it again
 .button-main {
     display: inline-block;   
+    animation: logoPulse 4s linear infinite;
 
     a {
         color: $secondary;

@@ -1,0 +1,179 @@
+.music-player {
+    background: $primary;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transition: .2s;
+    overflow: hidden;
+
+    #myCanvas {
+        position: absolute;
+        top: 49%;
+        left: 49.5%;
+        transform: translate(-50%, -50%) rotate(42deg);
+        transition: .2s;
+    }
+
+    .music-close-button {
+        position: absolute;
+        top: 1%;
+        left: 99%;
+        transform: translateX(-100%);
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+
+        span {
+            background: $secondary;
+            color: $secondary;
+            display: block;
+            height: 2px;
+            width: 90%;
+            margin: 10px 0;
+
+            &:first-child {
+                transform: rotate(45deg) translate(7px, 5px);
+            }
+
+            &:last-child {
+                transform: rotate(-45deg) translate(3px, -2px);
+            }
+        }
+    }
+
+    .music-player-element {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .icon-circle-mid {
+        width: 556px;
+        height: 556px;
+
+        .music-name {
+            position: absolute;
+            top: 7%;
+            left: 58%;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .next-prev-arrows {
+            position: absolute; 
+            top: 15%;
+            left: 70%;
+            display: flex;
+            width: 110px;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 11;
+
+            div {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .icon-play-pause {
+        width: 162px;
+        height: 162px;
+        cursor: pointer;
+        z-index: 5;
+    }
+
+    .music-arrow-left,
+    .music-arrow-right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 200px;
+    }
+
+    .music-arrow-left {
+        left: 0;
+    }
+
+    .music-arrow-right {
+        right: 0;
+    }
+}
+
+// Media queries
+@include media-down(s) {
+    .music-player {
+
+        .icon-circle-mid {
+
+            img {
+                transform: scale(.6);
+            }
+
+            .next-prev-arrows {
+                top: 32%;
+                left: 55%;
+            }
+
+            .music-name {
+                top: 24%;
+                left: 55%;
+                font-size: 13px;
+                width: 150px;
+            }
+        }
+
+        .music-arrow-left,
+        .music-arrow-right {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 806px) {
+    .music-player {
+        .music-arrow-left,
+        .music-arrow-right {
+            display : none;
+        }
+    }
+}
+
+// Landscape
+@include media-landscape {
+    .music-player {
+
+        .icon-circle-mid {
+            width: auto;
+            height: auto;
+
+            .music-name {
+                top: 8%;
+
+                p {
+                    width: 280px;
+                }
+            }
+
+            .next-prev-arrows {
+                top: 22%;
+                left: 75%;
+            }
+        }
+
+        .music-arrow-left,
+        .music-arrow-right {
+            display: none;
+        }
+    }
+} 
+
+
+// @media (min-width: 560px) and (max-height: 480px) and (orientation: landscape)
+
+
