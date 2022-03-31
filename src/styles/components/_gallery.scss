@@ -2,10 +2,11 @@
     position: relative;
     height: 400px;
     
-    img {
+    .img {
         position: absolute;
         width: 85%;
-        border: 2px solid white;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        overflow:hidden;
 
         &:first-child {
             right: 0;
@@ -19,6 +20,19 @@
         }
 
         @include media-up(m) {
+            cursor: pointer;
+            transition: .2s;
+
+            img {
+                transform: scale(1.1) rotate(5deg);
+                transition: .3s ease-in-out;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1) rotate(0deg);
+                }
+            }
 
             &:first-child {
                 right: 0;

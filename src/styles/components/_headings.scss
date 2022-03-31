@@ -23,7 +23,6 @@
 
     .heading-background {
         color: rgba(249, 1, 46, .09);       
-        // color: rgba(249, 1, 46, .5);
         font-weight: 700;
         font-size: 100px;
         position: relative;
@@ -50,6 +49,9 @@
             font-size: 46px;
             left: 50%;
             bottom: 45px;
+        }
+        @include media-up(xl) {
+            bottom: 60px;
         }
     }
 }

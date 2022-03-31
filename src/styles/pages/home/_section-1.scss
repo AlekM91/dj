@@ -16,15 +16,15 @@
         .cta {
            position: absolute;
            top: 50%;
-           right: 15px;
+        //    right: 15px;
 
-           @include media-up(s) {
-               right: 10%;
-            }
+        //    @include media-up(s) {
+        //        right: 10%;
+        //     }
 
-           @include media-up(l) {
-               right: 15%;
-            }
+        //    @include media-up(l) {
+        //        right: 15%;
+        //     }
         }
     }
 }
