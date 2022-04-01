@@ -1,5 +1,7 @@
 import '../styles/styles.scss';
 
+import musicApp from './MusicApp';
+
 if(module.hot) {
     module.hot.accept();
 }
@@ -38,3 +40,6 @@ function menuFunctionality() {
 }
 
 menuFunctionality();
+musicApp()
+
+
