@@ -190,6 +190,31 @@ function musicApp() {
             closePlayer();
         }
     });
+
+    // Toggle controls
+    let toggleControl = document.querySelector('.controls');
+
+    toggleControl.addEventListener('click',() => {
+        if(audio.hasAttribute('controls')) {
+            audio.removeAttribute('controls')
+        } else {
+            audio.setAttribute('controls', 'controls');
+        }
+    })
+
+    // Toggle video
+    let vid = document.querySelector('.video-background video');
+    let toggleVid = document.querySelector('.vid');
+
+    toggleVid.addEventListener('click', function() {
+        if(vid.paused || vid.ended) {
+            vid.play()
+            vid.style.opacity = '0.15';
+        } else {
+            vid.style.opacity = '0';
+            vid.pause();
+        }
+    });
 }
 
 export default musicApp;
