@@ -84,7 +84,8 @@
 
     li {
         transition: .2s;
-
+        position: relative;
+        
         &:hover {
             color: $secondary;
         }

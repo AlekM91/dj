@@ -1,6 +1,7 @@
 import '../styles/styles.scss';
-
 import musicApp from './MusicApp';
+import Glide from '@glidejs/glide'
+
 
 if(module.hot) {
     module.hot.accept();
@@ -40,6 +41,10 @@ function menuFunctionality() {
 }
 
 menuFunctionality();
+
+new Glide('.glide').mount()
+
+
 musicApp()
 
 

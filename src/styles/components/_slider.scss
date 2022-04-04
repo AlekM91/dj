@@ -1,0 +1,80 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+.slider {
+
+    img {
+        border-radius: 0 20%;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        width: 80%;
+        height: 250px;
+
+        @include media-up(m) {
+            height: 450px;
+        }
+    }
+
+    .glide__arrows {
+
+        .glide__arrow {
+            border: none;
+            top: auto;
+            border-radius: unset;
+            box-shadow: none;
+            text-shadow: none;
+
+
+            &--right {
+                background: url('/src/assets/images/career-arrow.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 30px;
+                height: 10px;
+
+                &::before {
+                    content: '';
+                    background: url('/src/assets/images/career-arrow-large.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    top: -100%;
+                    left: 0%;
+                    width: 60px;
+                    height: 20px;
+                }
+
+
+                @include media-up(s) {
+                    width: 40px;
+                    
+                    &::before {
+                        width: 70px;
+                        height: 30px;
+                    }
+                }
+            
+                @include media-up(m) {
+                    width: 45px;
+                    height: 14px;
+            
+                    &::before {
+                        width: 120px;
+                        height: 50px;
+                        top: -200%;
+                        left: -100%;
+                    }
+                }
+            
+                @include media-up(l) {
+                    width: 60px;
+                    height: 19px;
+            
+                    &::before {
+                        width: 174px;
+                        height: 99px;
+                    }
+                }
+            }
+        }
+    }
+}

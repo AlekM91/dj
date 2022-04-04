@@ -1,5 +1,8 @@
 .section-3 {
     text-align: center; 
-    height: 500px;
-    
+    margin-bottom: 100px;
+        
+    @include media-up(m) {
+        margin-bottom: 200px;
+    }
 }
