@@ -2,6 +2,9 @@ import '../styles/styles.scss';
 import musicApp from './MusicApp';
 import Glide from '@glidejs/glide'
 
+// import music
+import infinity from '../assets/music/infinity.mp3'
+
 
 if(module.hot) {
     module.hot.accept();
@@ -46,5 +49,6 @@ new Glide('.glide').mount()
 
 
 musicApp()
+// View the music app from the localhost due to CORS policy -- npm run dev
 
 

@@ -16,6 +16,9 @@ class RunAfterCompile {
         compiler.hooks.done.tap('Copy Images', function() {
             fse.copySync('./src/assets/images', './dist/assets/images')
         })
+        compiler.hooks.done.tap('Copy Music', function() {
+            fse.copySync('./src/assets/music', './dist/assets/music')
+        })
     }
 }
 
@@ -63,6 +66,14 @@ const config = {
                         }
                     }, 'sass-loader',
                 ]
+            },
+            
+            {
+                test: /\.mp3$/,
+	            loader: 'file-loader',
+                options: {
+                    publicPath: './dist/assets/music'
+                },
             }
         ]
     },
